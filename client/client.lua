@@ -1,7 +1,7 @@
 ESX                               = exports.es_extended:getSharedObject()
 
 local pedModel                    = false
-local playerPed                   = GetPlayerPed(-1)
+local playerPed                   = cache.ped
 local ped                         = nil
 local DrawMarker                  = DrawMarker
 local IsEntityDead                = IsEntityDead
