@@ -35,7 +35,7 @@ local function onExit(self)
     lib.hideTextUI()
 
     if self.ped and DoesEntityExist(self.ped) then
-        local playerPed = PlayerPedId()
+        local playerPed = cache.ped or PlayerPedId()
         local vehicle = GetVehiclePedIsIn(self.ped, false)
         
         if vehicle ~= 0 then
@@ -50,7 +50,7 @@ end
 
 
 local function onNearby(self)
-    local playerPed = PlayerPedId()
+    local playerPed = cache.ped or PlayerPedId()
     local interactionDistance = 14
     if self.currentDistance < 10 and not IsEntityDead(self.ped) and IsControlJustPressed(0, 38) then
         TaskEnterVehicle(self.ped, GetVehiclePedIsIn(playerPed, false), -1, 0, 1.0, 1, 0)
