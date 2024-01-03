@@ -1,5 +1,3 @@
-ESX                               = exports.es_extended:getSharedObject()
-
 local pedModel                    = false
 local playerPed                   = cache.ped
 local ped                         = nil
